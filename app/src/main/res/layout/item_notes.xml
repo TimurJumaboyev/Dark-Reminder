@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#E4E4E4"
+        android:elevation="10dp"
+        app:cardElevation="7dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageButton
+            android:padding="6dp"
+            android:background="?selectableItemBackground"
+            android:id="@+id/task_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:lines="2"
+                android:textSize="18sp"
+                android:fontFamily="@font/calibre_light"
+                android:text="@string/app_name"/>
+            <TextView
+                android:id="@+id/notesDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/back_color"
+                android:maxLines="1"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/calibre_light_italic"
+                android:text="25-may"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

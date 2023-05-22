@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/filterCompleted"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/oval"
+                android:layout_margin="5dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_filter"/>
+
+            <TextView
+                android:id="@+id/filterHigh"
+                android:layout_width="wrap_content"
+                android:text="High"
+                android:gravity="center"
+                android:padding="5dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:textColor="@color/redless"
+                android:background="@drawable/oval"
+                android:layout_height="wrap_content"
+                android:paddingStart="35dp"
+                android:paddingEnd="35dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/filterMedium"
+                android:layout_width="wrap_content"
+                android:text="Medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/yellow"
+                android:background="@drawable/oval"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/filterLow"
+                android:layout_width="wrap_content"
+                android:text="Low"
+                android:gravity="center"
+                android:padding="5dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:paddingStart="35dp"
+                android:paddingEnd="35dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/green"
+                android:background="@drawable/oval"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvAllNotes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAddNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:focusable="true"
+            android:clickable="true"
+            app:backgroundTint="#D66122"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
